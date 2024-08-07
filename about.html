@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="images/chat_logo1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Theme-container" >
+        <label class="switch tooltip">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+   <div class="container">
+    <div class="navibar">
+        <div class="logo">
+           <img src="images/chat_logo1.png" width="50px"> <label for="">AI Assistant HUB</label>
+        </div>
+        <nav>
+            <ul id="menuitems">
+                <li><a class="btn" href="index.html">Home</a></li>
+                <li><a class="btn" href="service.html">Service</a></li>
+                <li><a class="btn" href="about.html">About</a></li>
+                <li><a class="btn" href="contact.html">Contact</a></li>
+                <li><a class="btn" href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/">Try AI Assistant</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu_icon.png" class="menuicon" onclick="menu_toggle()" />
+    </div>
+    <div class="row">
+        <div class="col1">
+            <h1>About AI Assistant</h1>
+            <p>Welcome to AI Assistant, your reliable and versatile AI-powered helper, designed to make your life easier and more efficient.</p>
+            <a href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/" class="btn"> Try Now &rarr;</a>
+        </div>
+        <div class="col1">
+            <img src="images/about.png" alt="" width="375px">
+        </div>
+    </div>
+   </div>
+  </div>
+  <div class="small-container">
+    <div class="row1">
+        
+        <div class="col2">
+            <h2>Who I Am</h2>
+            <p>I am ChatGPT, a large language model developed by OpenAI. Powered by the latest GPT-4 architecture, I am capable of understanding and generating human-like text based on the input I receive.</p>
+        </div>
+        
+        <div class="col2">
+            <h2>What I Do</h2>
+            <p><b>My primary goal is to assist you in a variety of tasks, including:</b><br>
+                <b>Questions:</b> From general knowledge to specific queries, I provide accurate and relevant information. <br>
+                <b>Creation:</b>  Need help with writing? I can generate articles, emails, stories, and more. <br>
+                <b>Programming Help:</b> I offer guidance in coding, debugging, and development across multiple programming languages. <br>
+                <b>Learning and Education:</b> I assist with explanations, tutoring, and study support in various subjects. <br>
+                <b>Creative Collaboration:</b> Whether it's brainstorming ideas or refining your work, I'm here to help. <br>
+                </p>
+        </div>  
+     </div>
+</div>
+
+<div class="small-container">
+    <div class="row1">
+        <div class="col2">
+            <h2>How I Work</h2>
+            <p>Using state-of-the-art natural language processing (NLP) techniques, I understand the context and nuances of your requests to provide the most appropriate and helpful responses. My services are available 24/7, ensuring that you always have access to the support you need.</p>
+        </div>
+        
+        <div class="col2">
+            <h2>Why Choose AI Assistant?</h2>
+            <p><b>Efficiency:</b> Get quick and accurate responses to your queries. <br>
+                <b>Reliability:</b> Consistent performance and availability whenever you need help. <br>
+                <b>Versatility:</b> Capable of assisting with a wide range of topics and tasks. <br>
+                <b>User-Friendly:</b> Simple and intuitive interaction designed to meet your needs. <br>
+                <label for=""></label><br>
+                At AI Assistant, I am dedicated to enhancing your productivity and making your daily tasks more manageable. Thank you for choosing AI Assistant as your go-to resource for all your needs.</p>
+        </div>
+    </div>
+</div>
+
+    <hr>
+    <footer>
+        <p>Contact us at <a href="mailto:contact@aiassistant.com">contact@aiassistant.com</a></p>
+        <p>Follow us: 
+            <a href="https://twitter.com/AI_Assistant">Twitter</a> | 
+            <a href="https://www.linkedin.com/in/ai-assistant-services">LinkedIn</a> | 
+            <a href="https://www.facebook.com/aiassistant">Facebook</a>
+        </p>
+    </footer>
+    <script>
+       var menuitems = document.getElementById("menuitems");
+       menuitems.style.maxHeight = "0px";
+
+        function menu_toggle() {
+            if (menuitems.style.maxHeight == "0px") {
+            menuitems.style.maxHeight = "300px";
+            } else {
+            menuitems.style.maxHeight = "0px";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+    const themeSwitch = document.getElementById('theme-switch');
+    const body = document.body;
+
+    // Check the saved theme preference in localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeSwitch.checked = true;
+    } else {
+        body.classList.add('light-mode');
+        themeSwitch.checked = false;
+    }
+
+    // Event listener for the switch toggle
+    themeSwitch.addEventListener('change', () => {
+        if (themeSwitch.checked) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+      </script>
+</body>
+</html>

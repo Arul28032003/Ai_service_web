@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+.Theme-container {
+  display: flex;
+  margin: 20px;
+}
+.switch {
+  margin-left: auto; /* Pushes the switch to the right */
+}
+.switch:hover::after {
+  content: "Toggle theme";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 1;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+/* Light and Dark Mode Styles */
+body {
+  transition: background-color 1s, color 1s;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.light-mode a {
+  color: #007bff; /* Light mode link color */
+  text-decoration: none;
+}
+
+body.dark-mode a {
+  color: #1e90ff; /* Dark mode link color */
+  text-decoration: none;
+}
+
+/* Container for logo and label */
+.logo {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Space between logo and label */
+}
+
+/* Label styles */
+.logo label {
+  font-size: 1.2em; /* Adjust font size as needed */
+  margin: 0; /* Remove default margin */
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+}.navibar {
+  display: flex;
+  align-items:center;
+  padding: 20px;
+}nav {
+  flex: 1;
+  text-align: right;
+  margin-bottom: 20px;
+}nav ul {
+  display: inline-block;
+  list-style-type: none;
+}nav ul li {
+  display: inline-block;
+  margin: 20px;
+  transition: 0.5s;
+}nav ul li:hover {
+  transform: translateY(-5px);
+}a {
+  transition: 0.5s;
+  text-decoration: none;
+  transition: 1s;
+  
+}.container {
+  max-width: 1300px;
+  margin: auto;
+}.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}.col1 {
+  flex: 1;
+  padding: 20px;
+  margin: 0px 50px 0px 50px;
+}.col1 img{
+  padding-left: 90px;
+}
+.col1 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0 0 25px;
+}
+/* Base styles for the anchor tag */
+.btn {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  padding: 10px 20px; /* Add padding for spacing */
+  display: inline-block; /* Ensure padding and margin are applied properly */
+   /* Add top margin */
+}
+
+/* Underline effect */
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 10px;
+  height: 3px; /* Thickness of the underline */
+  background-color: #007BFf; /* Color of the underline */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: bottom right; /* Scale from right */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.btn:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+  transform-origin: bottom left; /* Scale from left */
+}
+
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Heading for the section */
+.head2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Flex container for the feature titles and content */
+.row1
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}.col2 {
+  flex: 1;
+  padding: 20px;
+  margin: 50px 50px 20px 50px;
+  background: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}.col2 h2{
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}.col2 p {
+  font-size: 16px;
+  color: #555;
+}
+.col2 ul li{
+  color: #333333;
+  margin: 20px;
+}
+/* Responsive design */
+@media (max-width: 1050px) {
+  .col1 img{
+    padding: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .row1 {
+      flex-direction: column;
+  }
+  .col2 {
+      margin: 10px 0;
+  }.col1 img{
+    padding: 0px;
+  }
+}.head2 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+.head2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 5px;
+  background-color: #007BFf; /* Change this to your desired color */
+}
+/* Styling for testimonials */
+.testimonials {
+  flex: 1;
+  padding: 20px;
+  margin: 50px 50px 50px 50px;
+  background: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+}
+
+/* Styling for images */
+.testimonials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Styling for paragraph */
+.testimonials p {
+  margin-left: 80px;
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+  .testimonials {
+      margin: 10px 0;
+  }
+}
+footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+}.menuicon {
+  width: 20px;
+  margin-left: 20px;
+  display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0px; /* Change left to right */
+    background: #fff;
+    width: 200px;
+    overflow: hidden;
+    max-height: 0px; /* Ensure menu is initially hidden */
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    color: #555;
+  }
+  .menuicon {
+    cursor: pointer;
+    display: block;
+  }
+  .col1 img {
+    width: 250px;
+  }
+  .col1 {
+    margin: 0;
+  }
+}

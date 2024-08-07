@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant HUB</title>
+    <link rel="icon" href="images/chat_logo1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Theme-container" >
+        <label class="switch tooltip">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+   <div class="container">
+    <div class="navibar">
+        <div class="logo">
+           <img src="images/chat_logo1.png" width="50px"> <label for="">AI Assistant HUB</label>
+        </div>
+        <nav>
+            <ul id="menuitems">
+                <li><a class="btn" href="">Home</a></li>
+                <li><a class="btn" href="service.html">Service</a></li>
+                <li><a class="btn" href="about.html">About</a></li>
+                <li><a class="btn" href="contact.html">Contact</a></li>
+                <li><a class="btn" href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/">Try AI Assistant</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu_icon.png" class="menuicon" onclick="menu_toggle()" />
+    </div>
+    <div class="row">
+        <div class="col1">
+            <h1>Welcome to AI Assistant Hub</h1>
+            <p>Your reliable AI-powered helper designed to make your <br>life easier and more efficient.</p>
+            <a href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/" class="btn"> Try Now &rarr;</a>
+        </div>
+        <div class="col1">
+            <img src="images/chatbot.png" alt="" width="375px">
+        </div>
+    </div>
+   </div>
+  </div>
+  <div class="small-container">
+    <h2 class="head2">Features</h2>
+    <div class="row1">
+        
+        <div class="col2">
+            <h2>24/7 Availability</h2>
+            <p>I'm always here to help, no matter the time of day.</p>
+        </div>
+        
+        <div class="col2">
+            <h2>Versatile Support</h2>
+            <p>From answering questions to providing detailed <br>content and technical support, <br> I’ve got you covered.</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="small-container">
+        <h2 class="head2">What Our Users Say</h2>
+        <div class="row">
+            <section class="testimonials">
+                <img src="images/jane.jpg" alt="Jane Doe">
+                <p>"AI Assistant has been a game-changer for my daily tasks. <br>Highly reliable and efficient!" <br>– Jane Doe</p>
+            </section>
+            <section class="testimonials">
+                <img src="images/john.jpg" alt="John Smith">
+                <p>"Whether it's coding help or creative writing, <br>AI Assistant never disappoints." <br>– John Smith</p>
+            </section>
+            <a href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/" class="btn"> Try Now &rarr;</a>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>Contact us at <a href="mailto:contact@aiassistant.com">contact@aiassistant.com</a></p>
+        <p>Follow us: 
+            <a href="https://twitter.com/AI_Assistant">Twitter</a> | 
+            <a href="https://www.linkedin.com/in/ai-assistant-services">LinkedIn</a> | 
+            <a href="https://www.facebook.com/aiassistant">Facebook</a>
+        </p>
+    </footer>
+    <script>
+       var menuitems = document.getElementById("menuitems");
+       menuitems.style.maxHeight = "0px";
+
+        function menu_toggle() {
+            if (menuitems.style.maxHeight == "0px") {
+            menuitems.style.maxHeight = "300px";
+            } else {
+            menuitems.style.maxHeight = "0px";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+    const themeSwitch = document.getElementById('theme-switch');
+    const body = document.body;
+
+    // Check the saved theme preference in localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeSwitch.checked = true;
+    } else {
+        body.classList.add('light-mode');
+        themeSwitch.checked = false;
+    }
+
+    // Event listener for the switch toggle
+    themeSwitch.addEventListener('change', () => {
+        if (themeSwitch.checked) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+      </script>
+</body>
+</html>

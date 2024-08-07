@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" href="images/chat_logo1.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="Theme-container" >
+        <label class="switch tooltip">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+   <div class="container">
+    <div class="navibar">
+        <div class="logo">
+           <img src="images/chat_logo1.png" width="50px"> <label for="">AI Assistant HUB</label>
+        </div>
+        <nav>
+            <ul id="menuitems">
+                <li><a class="btn" href="index.html">Home</a></li>
+                <li><a class="btn" href="service.html">Service</a></li>
+                <li><a class="btn" href="about.html">About</a></li>
+                <li><a class="btn" href="contact.html">Contact</a></li>
+                <li><a class="btn" href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/">Try AI Assistant</a></li>
+            </ul>
+        </nav>
+        <img src="images/menu_icon.png" class="menuicon" onclick="menu_toggle()" />
+    </div>
+    <div class="row">
+        <div class="col1">
+            <h1>Services</h1>
+        </div>
+        <div class="col1">
+            <img src="images/service.png" alt="" width="375px">
+        </div>
+    </div>
+    </div>
+
+    <div class="small-container">
+        <div class="row1">
+            
+            <div class="col2">
+                <h2>1. Question Answering</h2>
+                <p><b>Description:</b> I provide accurate and relevant answers to your questions, whether they are about general knowledge, specific topics, or personal inquiries.
+                </p>
+                <p><b>Features:</b> Quick response time, reliable information sourcing, and comprehensive answers.
+                </p>
+            </div>
+            
+            <div class="col2">
+                <h2>2. Content Creation</h2>
+                <p><b>Description:</b> Need help with writing? I can generate high-quality content for articles, blog posts, emails, stories, reports, and more.</p>
+                <p><b>Features:</b>Creative and engaging writing, adherence to guidelines, and plagiarism-free content.
+                </p>
+            </div>
+            <div class="col2">
+                <h2>3. Programming Assistance</h2>
+                <p><b>Description:</b> I offer guidance and support for coding, debugging, and development across multiple programming languages such as Python, JavaScript, C++, and more.</p>
+                <p><b>Features:</b>Code examples, troubleshooting, and step-by-step instructions.</p>
+            </div>
+            <div class="col2">
+                <h2>4. Learning and Education</h2>
+                <p><b>Description:</b> I assist with explanations, tutoring, and study support in various subjects including mathematics, science, history, and languages.
+                </p>
+                <p><b>Features:</b>Clear and concise explanations, personalized learning support, and educational resources.
+
+            </div>
+            <div class="col2">
+                <h2>5. Creative Collaboration</h2>
+                <p><b>Description:</b> Whether you need help brainstorming ideas, refining your work, or creating something new, I'm here to collaborate with you on creative projects.</p>
+                <p><b>Features:</b>Idea generation, feedback and critique, and collaborative development.</p>
+            </div>
+            <div class="col2">
+                <h2>6. Virtual Assistance</h2>
+                <p><b>Description:</b> I can help with everyday tasks such as scheduling, reminders, research, and data management to make your life more organized and efficient.
+                </p>
+                <p><b>Features:</b>Timely reminders, thorough research, and effective organization.</p>
+            </div>
+            <div class="col2">
+                <h2>7. Language Translation</h2>
+                <p><b>Description:</b>I provide translation services for multiple languages, ensuring that your message is accurately conveyed across different linguistic contexts.</p>
+                <p><b>Features:</b>Accurate translations, context preservation, and support for various languages.</p>
+            </div>
+            <div class="col2">
+                <h2>8. Personalized Recommendations</h2>
+                <p><b>Description:</b>  Based on your preferences and needs, I can offer personalized recommendations for books, movies, restaurants, travel destinations, and more.
+                </p>
+                <p><b>Features:</b>Tailored suggestions, wide-ranging options, and detailed descriptions.
+                </p>
+            </div>
+            <div class="col2">
+                <h2>9. Technical Support</h2>
+                <p><b>Description:</b>  I offer assistance with technical issues, helping you troubleshoot problems with your devices, software, and other tech-related concerns.</p>
+                <p><b>Features:</b>Step-by-step guidance, problem-solving, and user-friendly explanations.</p>
+            </div>
+        </div>
+        <a href="https://jerrybot-8majytroskyk9tsjaknlsc.streamlit.app/" class="btn"> Try Now &rarr;</a>
+    </div>
+   
+    <hr>
+    <footer>
+        <p>Contact us at <a href="mailto:contact@aiassistant.com">contact@aiassistant.com</a></p>
+        <p>Follow us: 
+            <a href="https://twitter.com/AI_Assistant">Twitter</a> | 
+            <a href="https://www.linkedin.com/in/ai-assistant-services">LinkedIn</a> | 
+            <a href="https://www.facebook.com/aiassistant">Facebook</a>
+        </p>
+    </footer>
+    <script>
+       var menuitems = document.getElementById("menuitems");
+       menuitems.style.maxHeight = "0px";
+
+        function menu_toggle() {
+            if (menuitems.style.maxHeight == "0px") {
+            menuitems.style.maxHeight = "300px";
+            } else {
+            menuitems.style.maxHeight = "0px";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+    const themeSwitch = document.getElementById('theme-switch');
+    const body = document.body;
+
+    // Check the saved theme preference in localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeSwitch.checked = true;
+    } else {
+        body.classList.add('light-mode');
+        themeSwitch.checked = false;
+    }
+
+    // Event listener for the switch toggle
+    themeSwitch.addEventListener('change', () => {
+        if (themeSwitch.checked) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+      </script>
+</body>
+</html>
