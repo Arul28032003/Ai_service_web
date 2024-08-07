@@ -333,12 +333,12 @@ footer a {
   }
   nav ul li {
     display: block;
-    margin-right: 50px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    text-align: center;
   }
   nav ul li a {
     color: #555;
+    padding: 10px 0; /* Adjust vertical padding for spacing */
+    text-decoration: none; /* Remove underline if desired */
   }
   .menuicon {
     cursor: pointer;
